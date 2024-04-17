@@ -1,0 +1,440 @@
+/* This is CSS for PHYbrary. */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Code for navigation menu starts here */
+
+nav {
+    z-index: 50;
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px 3px 3px);
+}
+
+label.logo img {
+    padding-left: 20px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 7px;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 0px 7px;
+    text-decoration: none;
+}
+
+.sbar{
+    padding:5px 20px;
+    border: 3px solid #B404B4;
+    border-radius: 50px;
+    font-weight: 600;
+}
+input:focus{
+    outline: none;
+}
+
+a.home,
+a:hover {
+    color: #3B8BEB;
+    transition: .5s;
+}
+
+
+
+.checkbtn1,.checkbtn2 {
+    font-size: 30px;
+    color:  #3B8BEB;
+    float: right;
+    line-height: auto;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+    padding-top: 5px;
+}
+
+#check {
+    display: none;
+}
+
+
+@media (max-width:980px) {
+    nav{
+        height: auto;
+        position: fixed
+    };
+    label.logo img {
+        height: auto;
+        margin-top: 5px;
+        width: auto;
+    }
+
+    .checkbtn1 {
+        display: block;
+        color: #209BBA;
+    }
+
+    a.home,
+    a:hover {
+        color: white;
+        transition: .5s;
+    }
+
+    ul {
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        background: #209BBA;
+        right: -120%;
+        text-align: center;
+        transition: all .5s;
+
+
+    }
+
+    nav ul li {
+        display: block;
+        margin: 30px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 17px;
+    }
+
+    .checkbtn1:active {
+        color:#176F85;
+    }
+
+    #check:checked~ul {
+        right: -20px;
+    }
+    #check:checked~.checkbtn1 {
+        display: none;
+    }
+    #check:checked~.checkbtn2 {
+        display: block;
+        color: #209BBA;
+    }
+
+}
+    @media (max-width:500px) {
+        label.logo img {
+            height:auto;
+            width:200px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .checkbtn1{
+            font-size: 24px;
+            padding-top: 10px;
+            
+        }
+        ul{
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+
+
+/* Code for navigation menu ends here */
+
+
+/* Code for the introduction to the site starts here */
+
+#intro {
+   
+    padding-left: 100px;
+    padding-top: 40px;
+    color: #3B8BEB;
+    font-size: 34px;
+    font-weight: 850;
+    display:inline-block;
+    }
+#wel{
+    display: inline;
+}
+ /* Code for form making  */
+.container{
+    display:inline-block;
+    height: auto;
+    text-align: left;
+    width: 100%;
+
+}
+.desc {
+    font-size: 24px;
+    color: #209BBA;
+    text-align: left;
+    font-weight: 750;
+    padding-top: 30px;
+    padding-left: 100px; 
+    width: 55%; 
+}
+.form{
+    margin-top: 20px;
+    padding-top: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    height: 340px;
+    width: auto;
+    background-color:#209BBA;
+    border-radius: 20px;
+}
+.form input{
+    display: block;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    padding :15px;
+    width: 350px;
+    height: 50px;
+    font-weight: 600;
+    font-size: larger;
+}
+.form span{
+    color: white;
+    margin-bottom: 5px;
+    font-weight: 600;
+    margin-left: 60px;
+    font-size: 20px;
+}
+.form button{
+    margin-left:60px ;
+    width:150px;
+    height: 45px;
+    background-color:#B404B4;
+    border: 0px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+@media (max-width:980px) {
+    #intro {
+        display: block;
+        text-align: center;
+        padding: 20px 40px;
+        padding-top: 50px;
+        font-size: 24px;
+        font-weight: 600;
+       
+    }
+    #wel{
+        display: block;
+    }
+    .desc{
+        width: 82%;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin: auto;
+        font-weight: 400;
+    }
+    .container{
+        display:block;
+        width:auto;
+        margin: auto;
+    }
+    .form{
+        box-sizing: border-box;
+        float:none;
+        padding:30px;
+        width:470px;
+        margin: auto;
+    }
+    .form input,.form span{
+        margin-left: 40px;
+        width:auto;
+    }
+    .form button{
+        margin-left: 40px;
+    }
+   
+
+}
+@media (max-width:500px) {
+    .container{
+        display:block;
+        width:auto;
+        margin-left: 0px;
+        margin-right:0px;
+    }
+    .form{
+        margin: 0px 30px;
+        width: auto;
+        padding: 20px 0px;
+        height: auto;
+    }
+    .form input{
+        margin-bottom: 20px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .form button{
+        width: 100px;
+        height: 40px;
+    }
+    .form span{
+        font-size: 18px;
+    }
+    .desc{
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: auto;
+    }
+
+
+}
+
+/* code for form making ends here */
+
+/* blog  begin*/
+
+#blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.blog-heading h3 {
+    font-size: 30px;
+    color:  #3B8BEB;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+    
+}
+
+.blog-box {
+    box-sizing: border-box;
+    width: 350px;
+    height: 415px;
+    background-color: #E7E3D4;
+    filter: drop-shadow(rgba(0, 0, 0, 0.15) 0px 3px 3px);
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.blog-img {
+    width: 100%;
+    height: 180px;
+    
+}
+
+.blog-img img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius:15px ;
+
+}
+
+.blog-text {
+    padding: 25px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-text span {
+    color: black;
+    font-size: 0.9rem;
+}
+
+.blog-text .blog-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #531b8b;
+}
+
+.blog-text a {
+    text-decoration: none;
+    color: #531b8b;
+}
+
+.blog-text .blog-title:hover , .blog-text a:hover {
+    color:  #3B8BEB;
+    transition: 0.3s;
+}
+
+.blog-text p {
+    color: grey;
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipses;
+    margin: 20px 0px;
+}
+
+/* adopting to the screen size change */
+
+@media (max-width:1250px) {
+    .blog-box {
+        width: 300px;        
+    }
+}
+
+@media (max-width:800px) {
+    .blog-box {
+        width: 70%;
+    }
+}
+
+@media (max-width:550px) {
+    .blog-box {
+        margin: 20px 30px;
+        width: 100%;
+
+    }
+    .blog-heading h3 {
+        font-size: 22px;
+        font-weight: 700;
+    }
+}
+
+/* blog end */
